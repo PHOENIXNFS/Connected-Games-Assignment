@@ -70,6 +70,11 @@ public class GameLauncher : MonoBehaviourPunCallbacks
 
         Player[] players = PhotonNetwork.PlayerList;
 
+        foreach (Transform child in PlayerListContent)
+        {
+            Destroy(child.gameObject);
+        }
+
         for (int i = 0; i < players.Length; i++)
         {
             Instantiate(PlayerItemListPrefab, PlayerListContent).GetComponent<PlayerListItem>().PlayerSetUp(players[i]);
@@ -116,6 +121,8 @@ public class GameLauncher : MonoBehaviourPunCallbacks
 
         for (int i= 0; i<roomList.Count; i++)
         {
+            if (roomList[i].RemovedFromList)
+                continue;
             Instantiate(RoomItemListPrefab, RoomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
         }
     }
