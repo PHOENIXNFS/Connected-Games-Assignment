@@ -64,14 +64,17 @@ public class GamePlayerController : MonoBehaviour
 
     public void Jump()
     {
+        Debug.LogFormat("<color=red>Inside Jump Function</color>");
         if (Input.GetKey(KeyCode.Space) && bIsGrounded)
         {
+            Debug.LogFormat("<color=green>Inside If Condition of Jump Function</color>");
             rigidbody_Player.AddForce(transform.up * jumping_force);
         }
     }
 
     public void SetIsGrounded (bool _grounded)
     {
+        Debug.LogFormat("<color=yellow>Inside Grounded Function</color>");
         bIsGrounded = _grounded;
     }
 

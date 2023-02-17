@@ -2269,7 +2269,7 @@ Transform:
   m_GameObject: {fileID: 7340361300715364716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5238391250437242772}
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   camera_sensitivity: 2
   move_speed: 3
   sprint_speed: 6
-  jumping_force: 20
+  jumping_force: 25
   smooth_time: 0.2
   CameraHolder: {fileID: 3689971676147504558}
 --- !u!54 &8812589893566341603
